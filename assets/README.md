@@ -1,4 +1,4 @@
-Put your profile photo here, e.g. `profile.jpg`.
+Put your profile photo here, e.g. `profile.jpeg`.
 
 Then in `index.html`, find the placeholder block inside the `hero` section:
 
@@ -12,7 +12,7 @@ Then in `index.html`, find the placeholder block inside the `hero` section:
 Replace it with:
 
 ```html
-<img class="hero-photo" src="assets/profile.jpg" alt="Cooper Hince">
+<img class="hero-photo" src="assets/profile.jpeg" alt="Cooper Hince">
 ```
 
 `.hero-photo` already has sizing and a border set in `css/style.css`, so the
