@@ -22,7 +22,7 @@ assets/               ← put your profile photo in here
    ```js
    {
      title: "Title of the paper",
-     date: "2026-09",              // YYYY-MM, used for sorting/display
+     date: "2026-09",              // YYYY-MM, for display only (entries render in the order you add them)
      description: "One or two sentences on what it covers.",
      file: "my-new-paper.pdf"      // must match the filename in /papers
    },
