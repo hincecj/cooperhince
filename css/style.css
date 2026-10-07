@@ -14,7 +14,6 @@
   --font-mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
 
   --max-width: 1100px;
-  --prose-width: 760px;
   --gutter: 24px;
   --side-col: 380px;
 }
@@ -261,10 +260,11 @@ img.hero-photo {
 }
 .back-link { margin-bottom: 40px; }
 
+/* The negative margin and matching padding stretch the divider line to the same
+   width as the section dividers on the home page, while the text stays aligned. */
 .project-header {
-  max-width: var(--prose-width);
-  padding-bottom: 32px;
-  margin-bottom: 40px;
+  margin: 0 calc(-1 * var(--gutter)) 40px;
+  padding: 0 var(--gutter) 32px;
   border-bottom: 1px solid var(--border);
 }
 .project-header h1 {
@@ -276,16 +276,6 @@ img.hero-photo {
   margin-bottom: 20px;
 }
 
-/* Text keeps a readable line length; figures, tables and simulations use the full width. */
-.project-body > p,
-.project-body > h2,
-.project-body > h3,
-.project-body > ul,
-.project-body > ol,
-.project-body > pre,
-.project-body > blockquote {
-  max-width: var(--prose-width);
-}
 .project-body h2 {
   font-size: 26px;
   margin: 2em 0 0.6em;
