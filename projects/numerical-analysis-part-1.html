@@ -46,40 +46,33 @@
 
   <article class="project-body">
 
-    <h2>Summary</h2>
+    <h2>Abstract</h2>
     <p>
-      This write-up derives one particular method for solving differential equations
-      numerically, then applies it to two real world examples. All of the mathematics
-      was done by hand first, then transcribed and polished for readability. The main
-      objective is a method for simulating the three body problem in Python, with some
-      other applications and ideas along the way.
+      This write-up derives one particular method for solving differential equations numerically,
+      then applies it to two real world examples. All of the mathematics was done by hand first,
+      then transcribed and polished for readability. The main objective is a method for simulating
+      the three body problem in Python, with some other applications and ideas along the way.
     </p>
 
-    <h2>The method</h2>
+    <h2>The Method</h2>
     <p>
-      For an explicit $n$th order ODE $y^{(n)} = f(x, y)$, the forward finite difference
-      recursion for $y_k$ is
+      For a differential equation of the form $y^{(n)} = f(x, y)$, the forward finite difference
+      recursion for $y_k$ is given by:
     </p>
     <p>
       $$ y_k = h^n f(x_{k-n}, y_{k-n}) + \sum_{i=1}^{n} \binom{n}{i} (-1)^{i+1} y_{k-i} $$
     </p>
     <p>
-      with $x_k = x_{k-1} + h$ and $0 \lt h \ll 1$, where the starting values
-      $y_0, y_1, \dots, y_{n-1}$ are determined from the initial conditions. The first
-      chapter of the write-up derives this recursion using the shift operator $E$ and the
-      forward difference operator $\Delta = E - 1$.
+      with $x_k = x_{k-1} + h$. The starting values
+      $y_0, y_1, \dots, y_{n-1}$ are determined from the initial conditions.
     </p>
-
-    <h2>Applications</h2>
-    <ul>
-      <li>The $n$ body problem, with the three body case simulated in Python.</li>
-      <li>A damped pendulum.</li>
-    </ul>
-
-    <h2>Limitations</h2>
     <p>
-      Truncation error and energy conservation are not covered. This is a basic
-      implementation of some numerical ideas.
+      The idea behind this model is that a recursive relationship can be found for $y$ using
+      the definition of the derivative to write $y^{(n)}$ as an $n$th forward difference divided by
+      $h^n$, then expanding that difference with the binomial theorem and rearranging for $y_k$, the newest term.
+    </p>
+    <p>
+      This recursion can then be implemented into code to solve any differential equation of that form, with first order accuracy $O(h)$.
     </p>
 
     <!-- Interactive simulations will go here. See the root README, "Adding a simulation". -->
