@@ -51,8 +51,12 @@
     <p>
       This write-up derives one particular method for solving differential equations numerically,
       then applies it to two real world examples. All of the mathematics was done by hand first,
-      then transcribed and polished for readability. The main objective is a method for simulating
-      the three body problem in Python, with some other applications and ideas along the way.
+      then transcribed and polished for readability.
+    </p>
+    <p>
+      The objective of this write-up was to teach myself how to solve differential equations
+      numerically, and to better understand the mechanics behind more advanced solving techniques
+      like RK4 and LSODA.
     </p>
 
     <h2>The Method</h2>
@@ -68,8 +72,8 @@
       $y_0, y_1, \dots, y_{n-1}$ are determined from the initial conditions.
     </p>
     <p>
-      The purpose of this model is to find numerical solutions to differential equations without
-      needing an analytic solution. The method is explicit, meaning each new solution
+      The purpose of this particular model is to find numerical solutions to differential equations
+      without needing an analytic solution. The method is explicit, meaning each new solution
       $y_k$ is computed directly from earlier values, which keeps the implementation simple. The
       trade-off is accuracy: it is only first order, with error $O(h)$, so a small step size $h$
       is needed.
