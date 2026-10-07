@@ -1,6 +1,6 @@
 # cooperhince
 
-Cooper's personal website: actuarial science, data analysis and numerical
+Cooper's personal site: actuarial science, data analysis and numerical
 analysis work. Plain HTML/CSS/JS, no build step, made to run on GitHub Pages.
 
 ## Structure
