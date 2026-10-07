@@ -47,7 +47,7 @@
     const repo = paper.repo ? encodeURI(paper.repo) : '';
 
     const links = [
-      paper.page ? `<a class="paper-link" href="projects/${page}">Read More</a>` : '',
+      paper.page ? `<a class="paper-link" href="projects/${page}">Read more</a>` : '',
       paper.file ? `<a class="paper-link" href="papers/${file}" target="_blank" rel="noopener">View PDF</a>` : '',
       paper.repo ? `<a class="paper-link" href="${repo}" target="_blank" rel="noopener">View GitHub</a>` : ''
     ].filter(Boolean).join('');
