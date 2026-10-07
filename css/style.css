@@ -14,6 +14,7 @@
   --font-mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
 
   --max-width: 1100px;
+  --prose-width: 760px;
   --gutter: 24px;
   --side-col: 380px;
 }
@@ -252,6 +253,181 @@ img.hero-photo {
   font-style: italic;
 }
 
+/* ---------- project ("Read more") pages ---------- */
+.project {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 48px var(--gutter) 88px;
+}
+.back-link { margin-bottom: 40px; }
+
+.project-header {
+  max-width: var(--prose-width);
+  padding-bottom: 32px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--border);
+}
+.project-header h1 {
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+.project-header .lede {
+  max-width: none;
+  margin-bottom: 20px;
+}
+
+/* Text keeps a readable line length; figures, tables and simulations use the full width. */
+.project-body > p,
+.project-body > h2,
+.project-body > h3,
+.project-body > ul,
+.project-body > ol,
+.project-body > pre,
+.project-body > blockquote {
+  max-width: var(--prose-width);
+}
+.project-body h2 {
+  font-size: 26px;
+  margin: 2em 0 0.6em;
+}
+.project-body h2:first-child { margin-top: 0; }
+.project-body h3 {
+  font-size: 21px;
+  margin: 1.6em 0 0.5em;
+}
+.project-body ul,
+.project-body ol {
+  padding-left: 1.4em;
+  margin: 0 0 1em;
+}
+.project-body li { margin-bottom: 0.4em; }
+.project-body li::marker { color: var(--accent); }
+.project-body p a,
+.project-body li a {
+  color: var(--accent);
+  text-underline-offset: 3px;
+}
+.project-body blockquote {
+  margin: 0 0 1em;
+  padding-left: 20px;
+  border-left: 1px solid var(--border);
+  color: var(--text-muted);
+}
+.project-body code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: var(--surface);
+  padding: 1px 5px;
+}
+.project-body pre {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 16px;
+  margin: 0 0 1em;
+  overflow-x: auto;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.project-body pre code {
+  background: none;
+  padding: 0;
+  font-size: inherit;
+}
+.project-body figure { margin: 32px 0; }
+.project-body figcaption {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 10px;
+}
+.project-body .katex { font-size: 1.1em; }
+.project-body .katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 4px 0;
+}
+.project-body .katex-display > .katex { font-size: 1.21em; }
+
+/* ---------- simulations (built by js/sim.js) ---------- */
+.sim {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  margin: 32px 0;
+}
+.sim-stage { background: var(--bg); }
+.sim-canvas {
+  display: block;
+  width: 100%;
+}
+.sim-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-top: 1px solid var(--border);
+}
+.sim-btn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+.sim-btn:hover { border-color: var(--accent); }
+.sim-readout {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-muted);
+  white-space: pre-wrap;
+}
+.sim-controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px 28px;
+  padding: 16px;
+  border-top: 1px solid var(--border);
+}
+.sim-control {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.sim-control-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-muted);
+}
+.sim-control input[type="range"],
+.sim-control input[type="checkbox"] { accent-color: var(--accent); }
+.sim-control input[type="range"] { width: 100%; }
+.sim-control input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+}
+.sim-control select {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 6px 8px;
+}
+.sim-error {
+  padding: 12px 16px;
+  border-top: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text);
+}
+
 /* ---------- footer ---------- */
 .site-footer {
   width: 100%;
@@ -295,6 +471,9 @@ img.hero-photo {
   .hero h1 { font-size: 38px; }
   .lede { font-size: 17px; }
   .section { padding: 64px var(--gutter); }
+
+  .project { padding: 32px var(--gutter) 64px; }
+  .project-header h1 { font-size: 30px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
