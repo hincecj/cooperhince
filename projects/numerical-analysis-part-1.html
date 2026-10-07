@@ -67,12 +67,11 @@
       $y_0, y_1, \dots, y_{n-1}$ are determined from the initial conditions.
     </p>
     <p>
-      The idea behind this model is that a recursive relationship can be found for $y$ using
-      the definition of the derivative to write $y^{(n)}$ as an $n$th forward difference divided by
-      $h^n$, then expanding that difference with the binomial theorem and rearranging for $y_k$, the newest term.
-    </p>
-    <p>
-      This recursion can then be implemented into code to solve any differential equation of that form, with first order accuracy $O(h)$.
+      The purpose of this model is to find numerical solutions to differential equations without
+      needing an analytic solution. The method is explicit, meaning each new solution
+      $y_k$ is computed directly from earlier values, which keeps the implementation simple. The
+      trade-off is accuracy: it is only first order, with error $O(h)$, so a small step size $h$
+      is needed.
     </p>
 
     <!-- Interactive simulations will go here. See the root README, "Adding a simulation". -->
