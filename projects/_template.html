@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- STEP 1: change the page title (shown in the browser tab) and the description. -->
+<title>Project Title | Cooper's Archive</title>
+<meta name="description" content="One sentence about the project.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="wordmark">Cooper's Archive</a>
+    <nav class="site-nav" aria-label="Primary">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list">
+        <span>Menu</span>
+      </button>
+      <ul id="nav-list" class="nav-list">
+        <li><a href="../index.html#papers">Write-ups &amp; Projects</a></li>
+        <li><a href="../index.html#experience">Education &amp; Employment</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="project">
+
+  <a class="paper-link back-link" href="../index.html#papers">&larr; Back to projects</a>
+
+  <!-- STEP 2: the top of the page. Edit the date, title and overview. -->
+  <header class="project-header">
+    <div class="timeline-meta">Mon YYYY</div>
+    <h1>Project Title</h1>
+    <p class="lede">
+      One or two sentences giving the overview of the project.
+    </p>
+    <div class="paper-links">
+      <!-- Keep the links you need and delete the rest.
+           The PDF name must match a file in the /papers folder. -->
+      <a class="paper-link" href="../papers/my-paper.pdf" target="_blank" rel="noopener">View PDF</a>
+      <a class="paper-link" href="https://github.com/hincecj/my-repo" target="_blank" rel="noopener">View GitHub Code</a>
+    </div>
+  </header>
+
+  <!-- STEP 3: the write-up. Everything inside this article is yours to edit. -->
+  <article class="project-body">
+
+    <h2>Summary</h2>
+    <p>
+      Plain paragraphs go in p tags. Inline maths goes between single dollar signs,
+      for example $x_k = x_{k-1} + h$ or $0 \lt h \ll 1$.
+    </p>
+
+    <p>
+      Display maths goes between double dollar signs and sits on its own line:
+    </p>
+    <p>
+      $$ y_k = h^n f(x_{k-n}, y_{k-n}) + \sum_{i=1}^{n} \binom{n}{i} (-1)^{i+1} y_{k-i} $$
+    </p>
+
+    <p>
+      Multi line working uses the aligned environment (write &amp; as <code>&amp;amp;</code>):
+    </p>
+    <p>
+      $$
+      \begin{aligned}
+      \Delta &amp;= E - 1 \\
+      \Delta^n &amp;= (E - 1)^n = \sum_{j=0}^{n} \binom{n}{j} E^j (-1)^{n-j}
+      \end{aligned}
+      $$
+    </p>
+
+    <h2>A second section</h2>
+    <ul>
+      <li>Bullet points use ul and li tags.</li>
+      <li>Links look like <a href="https://github.com/hincecj">this</a>.</li>
+    </ul>
+
+    <!-- FIGURES: put the image in assets/figures/ then uncomment.
+    <figure>
+      <img src="../assets/figures/my-figure.png" alt="Describe the figure for screen readers">
+      <figcaption>Figure 1: caption goes here.</figcaption>
+    </figure>
+    -->
+
+    <!-- SIMULATIONS: see the "Adding a simulation" section of the root README.
+         1. Create js/sims/my-simulation.js (copy js/sims/_template.js).
+         2. Uncomment the div below, and the two script lines at the bottom of this page.
+    <div id="sim-my-simulation"></div>
+    -->
+
+  </article>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Cooper Hince</p>
+</footer>
+
+<!-- Do not remove these two: the menu button and the LaTeX rendering. -->
+<script src="../js/main.js"></script>
+<script src="../js/project.js"></script>
+
+<!-- SIMULATIONS: uncomment and rename when you add one.
+<script src="../js/sim.js"></script>
+<script src="../js/sims/my-simulation.js"></script>
+-->
+</body>
+</html>

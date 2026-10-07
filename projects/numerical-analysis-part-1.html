@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Numerical Analysis: A Tourist's Guide Part 1 | Cooper's Archive</title>
+<meta name="description" content="A derivation of a simple numerical differential equation solver, applied to the three body problem and a damped pendulum.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="wordmark">Cooper's Archive</a>
+    <nav class="site-nav" aria-label="Primary">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list">
+        <span>Menu</span>
+      </button>
+      <ul id="nav-list" class="nav-list">
+        <li><a href="../index.html#papers">Write-ups &amp; Projects</a></li>
+        <li><a href="../index.html#experience">Education &amp; Employment</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="project">
+
+  <a class="paper-link back-link" href="../index.html#papers">&larr; Back to projects</a>
+
+  <header class="project-header">
+    <div class="timeline-meta">Sept 2026</div>
+    <h1>Numerical Analysis: A Tourist's Guide Part 1</h1>
+    <p class="lede">
+      A derivation of a simple numerical differential equation solver, applied to
+      simulate the famous three body problem and a damped pendulum in Python.
+    </p>
+    <div class="paper-links">
+      <a class="paper-link" href="../papers/numerical_analysis_part_1.pdf" target="_blank" rel="noopener">View PDF</a>
+      <a class="paper-link" href="https://github.com/hincecj/numerical-analysis-part-1" target="_blank" rel="noopener">View GitHub Code</a>
+    </div>
+  </header>
+
+  <article class="project-body">
+
+    <h2>Summary</h2>
+    <p>
+      This write-up derives one particular method for solving differential equations
+      numerically, then applies it to two real world examples. All of the mathematics
+      was done by hand first, then transcribed and polished for readability. The main
+      objective is a method for simulating the three body problem in Python, with some
+      other applications and ideas along the way.
+    </p>
+
+    <h2>The method</h2>
+    <p>
+      For an explicit $n$th order ODE $y^{(n)} = f(x, y)$, the forward finite difference
+      recursion for $y_k$ is
+    </p>
+    <p>
+      $$ y_k = h^n f(x_{k-n}, y_{k-n}) + \sum_{i=1}^{n} \binom{n}{i} (-1)^{i+1} y_{k-i} $$
+    </p>
+    <p>
+      with $x_k = x_{k-1} + h$ and $0 \lt h \ll 1$, where the starting values
+      $y_0, y_1, \dots, y_{n-1}$ are determined from the initial conditions. The first
+      chapter of the write-up derives this recursion using the shift operator $E$ and the
+      forward difference operator $\Delta = E - 1$.
+    </p>
+
+    <h2>Applications</h2>
+    <ul>
+      <li>The $n$ body problem, with the three body case simulated in Python.</li>
+      <li>A damped pendulum.</li>
+    </ul>
+
+    <h2>Limitations</h2>
+    <p>
+      Truncation error and energy conservation are not covered. This is a basic
+      implementation of some numerical ideas.
+    </p>
+
+    <!-- Interactive simulations will go here. See the root README, "Adding a simulation". -->
+
+  </article>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Cooper Hince</p>
+</footer>
+
+<script src="../js/main.js"></script>
+<script src="../js/project.js"></script>
+</body>
+</html>
