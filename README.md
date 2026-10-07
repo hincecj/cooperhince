@@ -91,7 +91,7 @@ The link order on an entry is always: Read more, View PDF, View GitHub Code
    ```
 4. Commit and push.
 
-Every page already has the "Back to projects" link at the top, the site
+Every page already has the "Back to Write-ups & Projects" link at the top, the site
 header, and the footer. They come from the template, so keep them when you
 copy it.
 
@@ -111,9 +111,7 @@ HTML. The tags you will use most:
 | A block of code | `<pre><code>x = 1</code></pre>` |
 | A figure | see "Figures" below |
 
-Paragraphs and headings stay at a comfortable reading width. Figures and
-simulations use the full width of the page. To change the reading width, edit
-`--prose-width` at the top of `css/style.css`.
+Text, figures and simulations all use the same full page width as the home page.
 
 ### Writing LaTeX
 
