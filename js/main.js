@@ -42,10 +42,12 @@
     const title = escapeHtml(paper.title || 'Untitled');
     const description = escapeHtml(paper.description || '');
     const date = paper.date ? monthFormatter(paper.date) : '';
+    const page = encodeURIComponent(paper.page || '');
     const file = encodeURIComponent(paper.file || '');
     const repo = paper.repo ? encodeURI(paper.repo) : '';
 
     const links = [
+      paper.page ? `<a class="paper-link" href="projects/${page}">Read more</a>` : '',
       paper.file ? `<a class="paper-link" href="papers/${file}" target="_blank" rel="noopener">View PDF</a>` : '',
       paper.repo ? `<a class="paper-link" href="${repo}" target="_blank" rel="noopener">View GitHub Code</a>` : ''
     ].filter(Boolean).join('');
