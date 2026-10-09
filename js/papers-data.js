@@ -21,14 +21,14 @@
 
 const papers = [
   {
+    title: "Traffic Flow Models: Stability and Emergent Dynamics",
+    date: "Coming soon",
+    description: "This project will build and analyse a few car-following models, with the emphasis on how they behave rather than detailed derivations. The write-up will be kept approachable and non-technical, and will focus on intuition over rigour."
+  },
+  {
     title: "Numerical Analysis: A Tourist's Guide Part 1",
     date: "2026-09",
     description: "Part 1 of the numerical analysis series covers a derivation of a simple numerical differential equation integrator, applied to simulate the famous three body problem and a damped pendulum in Python.",
     page: "numerical-analysis-part-1.html", file: "numerical_analysis_part_1.pdf", repo: "https://github.com/hincecj/numerical-analysis-part-1"
-  },
-  {
-    title: "Traffic Flow Models: Stability and Emergent Dynamics",
-    date: "Coming soon",
-    description: "This project will build and analyse a few car-following models, with the emphasis on how they behave rather than detailed derivations. The write-up will be kept approachable and non-technical, and will focus on intuition over rigour."
   },
 ];
