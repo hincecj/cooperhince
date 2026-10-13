@@ -22,7 +22,7 @@
 const papers = [
   {
     title: "Traffic Flow Models: Stability and Emergent Dynamics",
-    date: "Coming soon",
+    date: "Coming soon!",
     description: "This project will build and analyse a few car-following models, with the emphasis on how they behave rather than detailed derivations. The write-up will be kept approachable and non-technical, and will focus on intuition over rigour."
   },
   {
