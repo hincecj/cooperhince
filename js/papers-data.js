@@ -26,9 +26,9 @@ const papers = [
     description: "This project will build and analyse a few car-following models, with the emphasis on how they behave rather than detailed derivations. The write-up will be kept approachable and non-technical, and will focus on intuition over rigour."
   },
   {
-    title: "Numerical Analysis: A Tourist's Guide Part 1",
+    title: "Numerical Analysis: A Tourist's Guide",
     date: "2026-09",
-    description: "Part 1 of the numerical analysis series covers a derivation of a simple numerical differential equation integrator, applied to simulate the famous three body problem and a damped pendulum in Python.",
-    page: "numerical-analysis-part-1.html", file: "numerical_analysis_part_1.pdf", repo: "https://github.com/hincecj/numerical-analysis-part-1"
+    description: "This write-up explores some surface level numerical analysis, and covers a derivation of a simple numerical differential equation integrator, applied to simulate the famous three body problem and a damped pendulum in Python.",
+    page: "numerical-analysis-a-tourists-guide.html", file: "numerical_analysis_a_tourists_guide.pdf", repo: "https://github.com/hincecj/numerical-analysis-a-tourists-guide"
   },
 ];
