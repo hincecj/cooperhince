@@ -77,9 +77,9 @@
     </p>
     <p>
       Many differential equations of this form are unsolvable using analytic techniques. Instead, we
-      can set up a recursive relationship that approximates the solution, $y$, from its previous values.
-      This can be achieved by stepping $x$ a small amount $h$ to the right, then “guessing” how far to go up
-      or down using the original equation.
+      can set up a recursive relationship that approximates the solution from previous values.
+      This can be achieved by stepping $x$ a small amount $h$ to the right, then “guessing” how much $y$ should change
+      during that step using the original equation.
     </p>
     <p>
       Using the definition of the derivative and some algebra, a simple
@@ -93,16 +93,16 @@
       $y_0, y_1, \dots, y_{n-1}$ are determined from the initial conditions of the system.
     </p>
     <p>
-      The full derivation of this model can be found in the attached PDF technical write-up, which was initially done by hand.
+      The full derivation of this model can be found in the attached PDF, which was initially done by hand.
     </p>
     <p>
       Implementing this model into code is very simple when compared to Runge-Kutta and other integration schemes. However, the
-      trade-off is accuracy: it is only first-order, with error $O(h)$, so doubling the step size doubles the error.
+      trade-off is accuracy: it is only first-order, with error $O(h)$, so halving the step size only halves the error.
     </p>
 
     <h2>Interactive Simulations</h2>
     <p>
-      Some interactive simulations that use this method will eventually be attached below (when I learn JavaScript).
+      Some interactive simulations that use this method will eventually be attached below.
     </p>
     <!-- Interactive simulations will go here. See the root README, "Adding a simulation". -->
 
