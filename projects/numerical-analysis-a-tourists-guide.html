@@ -63,30 +63,47 @@
       experience regardless.
     </p>
     <p>
-      Writing this document laid the groundwork for me to set up my own Runge Kutta library in Python,
-      a powerful integration method that helped Apollo 11 land on the moon.
+      Writing this document laid the groundwork for me to set up my own Runge-Kutta library in Python,
+      a powerful integration method that helped Apollo 11 land on the moon. Anyway, below is the main
+      method outlined in this write-up.
     </p>
 
-    <h2>The Method</h2>
+    <h2>The Forward Finite Difference Method</h2>
     <p>
-      For a differential equation of the form $y^{(n)} = f(x, y)$, the forward finite difference
-      recursion for $y_k$ is given by:
+      Let's say you encounter a differential equation of the following form:
+    </p>
+    <p>
+      $$ \frac{d^n y}{dx^n} = f(x, y) $$
+    </p>
+    <p>
+      Many differential equations of this form are unsolvable using analytic techniques. Instead, we
+      can set up a recursive relationship that approximates the solution, $y$, from its previous values.
+      This can be achieved by stepping $x$ a small amount $h$ to the right, then “guessing” how far to go up
+      or down using the original equation.
+    </p>
+    <p>
+      Using the definition of the derivative and some algebra, a simple
+      implementation of this method is the generalised recursive sequence seen below:
     </p>
     <p>
       $$ y_k = h^n f(x_{k-n}, y_{k-n}) + \sum_{i=1}^{n} \binom{n}{i} (-1)^{i+1} y_{k-i} $$
     </p>
     <p>
       with $x_k = x_{k-1} + h$. The starting values
-      $y_0, y_1, \dots, y_{n-1}$ are determined from the initial conditions.
+      $y_0, y_1, \dots, y_{n-1}$ are determined from the initial conditions of the system.
     </p>
     <p>
-      The purpose of this particular model is to find numerical solutions to differential equations
-      without needing an analytic solution. The method is explicit, meaning each new solution
-      $y_k$ is computed directly from earlier values, which keeps the implementation simple. The
-      trade-off is accuracy: it is only first order, with error $O(h)$, so a small step size $h$
-      is needed.
+      The full derivation of this model can be found in the attached PDF technical write-up, which was initially done by hand.
+    </p>
+    <p>
+      Implementing this model into code is very simple when compared to Runge-Kutta and other integration schemes. However, the
+      trade-off is accuracy: it is only first-order, with error $O(h)$, so doubling the step size doubles the error.
     </p>
 
+    <h2>Interactive Simulations</h2>
+    <p>
+      Some interactive simulations that use this method will eventually be attached below (when I learn JavaScript).
+    </p>
     <!-- Interactive simulations will go here. See the root README, "Adding a simulation". -->
 
   </article>
