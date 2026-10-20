@@ -49,14 +49,11 @@
 
     <h2>Abstract</h2>
     <p>
-      My first write-up, Numerical Analysis: A Tourist's Guide, is not intended to be a
-      rigorous or exhaustive analysis, but rather just a brief overview of some numerical techniques.
-      Even calling it "numerical analysis" is a bit of a stretch. However, differential
-      equations are the language of the universe, so I thought it was worth learning how to solve the
-      equations that mathematics alone can't handle.
+      This is my first posted write-up, so it leans heavily on the math and is light on explanation.
+      This makes the full PDF a bit hard to follow, so the motivations and main methods are summarised below.
     </p>
     <p>
-      The objective of this write-up was to teach myself how to solve differential equations
+      My personal motivation for this write-up was to learn how to solve differential equations
       numerically, and to better understand the mechanics behind more advanced solving techniques
       like RK4 and LSODA. It became apparent very quickly that the methods I have "developed" in this
       write-up are quite inefficient and inaccurate, but it was an invaluable learning
@@ -64,7 +61,7 @@
     </p>
     <p>
       Writing this document laid the groundwork for me to set up my own Runge-Kutta library in Python,
-      a more powerful integration method that helped Apollo 11 land on the moon. Anyways, here's the main method from the write-up.
+      a powerful integration scheme that helped Apollo 11 land on the moon. Anyways, here's the main method from the write-up.
     </p>
 
     <h2>The Forward Finite Difference Method</h2>
@@ -99,10 +96,6 @@
       trade-off is accuracy: it is only first-order, with error $O(h)$, so halving the step size only halves the error.
     </p>
 
-    <h2>Interactive Simulations</h2>
-    <p>
-      Some interactive simulations that use this method will eventually be attached below.
-    </p>
     <!-- Interactive simulations will go here. See the root README, "Adding a simulation". -->
 
   </article>
